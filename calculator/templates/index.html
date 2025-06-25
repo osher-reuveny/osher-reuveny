@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <h1>Scientific Calculator</h1>
+    <form method="post">
+        <input type="text" name="expression" value="{{ expression }}" placeholder="Enter expression" size="40" required>
+        <button type="submit">Calculate</button>
+    </form>
+    {% if result is not none %}
+        <p>Result: {{ result }}</p>
+    {% endif %}
+    {% if error %}
+        <p style="color:red;">Error: {{ error }}</p>
+    {% endif %}
+</body>
+</html>
